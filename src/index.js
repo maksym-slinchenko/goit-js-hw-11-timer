@@ -91,7 +91,6 @@ class CountdownTimer {
 
   setTimerFunction() {
     setInterval(() => {
-      this.pullStructure();
       this.insertTimerValue(this.makeStartDates());
       this.insertTimerValue(this.currentDates());
     }, 1000);
@@ -104,6 +103,7 @@ const timer = new CountdownTimer(
   getTemplate
 );
 
+timer.pullStructure();
 timer.setTimerFunction();
 
 // --------------------------------------------------------------------------------
